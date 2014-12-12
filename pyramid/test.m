@@ -12,6 +12,9 @@ N = 3;
 % [r s t] = pyramidApproxFekete_QR(N); % approximate Fekete based on QR
 if 0 % warning: this is slow, esp for high N. change "if 0" to "if 1" to run.  
     [r s t] = pyramidFekete3D(N); % approximate Fekete based on QR
+else
+    load feketeNodes
+    rst = fekete{N}; r = rst(:,1); s = rst(:,2); t = rst(:,3);
 end
 
 % compute Lebesgue constant of selected nodal set
