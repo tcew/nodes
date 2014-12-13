@@ -1,0 +1,32 @@
+% convert from reference triangle coordinates to equilateral triangle
+% coordinates 
+%
+% function [x, y] = rstoxy(r,s)
+%
+function [L1,L2,L3,L4] = xyztobary(xin,yin,zin)
+
+% equilateral vertices
+r
+% v1 = [r(1) s(1) t(1)];
+% v2 = [r(2) s(2) t(2)];
+% v3 = [r(3) s(3) t(3)];
+v4 = [r(4); s(4); t(4)];
+
+T = [x(1)-x(4), x(2)-x(4), x(3)-x(4);
+     y(1)-y(4), y(2)-y(4), y(3)-y(4);
+     z(1)-z(4), z(2)-z(4), z(3)-z(4)];
+ 
+for i = 1:length(x)    
+    xy = [x(i);y(i);z(i)];
+    L = T\[xy - v4];
+    L1(i) = L(1);
+    L2(i) = L(2);
+    L3(i) = L(3);
+    L4(i) = 1-L1(i)-L2(i)-L3(i);
+end
+L1 = L1(:);
+L2 = L2(:);
+L3 = L3(:);
+L4 = L4(:);
+
+return 
