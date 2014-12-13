@@ -5,7 +5,7 @@ function [r s t] = pyramidApproxFekete_QR(N,Nsample)
 
 tol = 1e-8;
 
-[rb sb tb] = PyramidSurfaceNodes3D(N);
+[rb sb tb] = pyramidSurfaceNodes3D(N);
 
 if N < 3
     r = rb; s = sb; t = tb;
