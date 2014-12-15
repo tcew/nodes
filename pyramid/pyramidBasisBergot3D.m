@@ -60,9 +60,9 @@ for i = 0:N
             scale = sqrt(2*4.^(mij+1));
             V(:,off) = p1{i+1}.*p2{j+1}.*p3*scale;
             if nargout > 1
-                Dr(:,off) = dp1dr{i+1}.*p2{j+1}.*p3;
-                Ds(:,off) = p1{i+1}.*dp2ds{j+1}.*p3;
-                Dt(:,off) = p1{i+1}.*p2{j+1}.*dp3dt;
+                Dr(:,off) = dp1dr{i+1}.*p2{j+1}.*p3*scale;
+                Ds(:,off) = p1{i+1}.*dp2ds{j+1}.*p3*scale;
+                Dt(:,off) = p1{i+1}.*p2{j+1}.*dp3dt*scale;
             end
             
             off = off + 1;
