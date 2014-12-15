@@ -753,7 +753,7 @@ pyramid_r(1:dim_num,5) = [  0.0,  0.0, 1.0 ]';
 r = pyramid_x(1,:);
 s = pyramid_x(2,:);
 t = pyramid_x(3,:);
-w = pyramid_w;
+w = pyramid_w*4/3;
 r = r(:); s = s(:); t = t(:); w = w(:);
 % r8mat_write ( filename_w, 1,       pyramid_order, pyramid_w' );
 % r8mat_write ( filename_x, dim_num, pyramid_order, pyramid_x );
