@@ -1,6 +1,4 @@
 % orthonormalized rational pyramid basis of Bergot, Durufle, Morgane.
-% 
-% note: normalization only works up to N = 15
 
 function [V, Dr, Ds, Dt] = pyramidBasisBergot3D(N,r,s,t)
 
