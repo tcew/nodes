@@ -3,7 +3,7 @@ nodes
 
 Interpolation Nodes for High-order Lagrange Finite Elements.
 
-arXiv references: TBA
+arXiv references: http://arxiv.org/abs/1412.4138
 
 Directories: tet, pyramid
 
