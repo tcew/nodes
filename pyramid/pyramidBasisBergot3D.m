@@ -57,7 +57,7 @@ for i = 0:N
                 dp3dt = (1-t).^mij.*2.*gjp3{k+1}{mij+1};
             end
             
-            scale = sqrt(2*4.^(mij+1));
+            scale = sqrt(2^(2*mij+3));            
             V(:,off) = p1{i+1}.*p2{j+1}.*p3*scale;
             if nargout > 1
                 Dr(:,off) = dp1dr{i+1}.*p2{j+1}.*p3*scale;
